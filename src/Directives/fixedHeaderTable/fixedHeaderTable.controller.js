@@ -15,14 +15,15 @@ myApp.controller("fixedHeaderTableController", [
 
         var onScrolllistener = function () {
             var scrolltrack = $(".ajs-table__body__wrapper").scrollLeft();
-            
+
             $(".ajs-table__header__wrapper .ajs-table").css({
                 "left": -scrolltrack
             });
         };
 
         var getCellWidth = function () {
-            document.querySelectorAll(".ajs-table thead tr th").forEach(function (dataTableRowCell) {
+
+            Array.prototype.slice.call(document.querySelectorAll(".ajs-table thead tr th")).forEach(function (dataTableRowCell) {
                 tableCellWidth.push(dataTableRowCell.clientWidth);
             });
         };
@@ -30,9 +31,11 @@ myApp.controller("fixedHeaderTableController", [
         var setColGroup = function () {
             $('.ajs-table').prepend("<colgroup></colgroup>");
 
-            tableCellWidth.forEach(function (width) {
+            Array.prototype.slice.call(tableCellWidth).forEach(function (width) {
                 $('.ajs-table colgroup').append("<col span='1' style='width: "+width+"px'/>")
             });
+
+            $('.ajs-table').css('width', $('.ajs-table').width()+'px');
 
             $('.ajs-table').css('table-layout', 'fixed');
         }
@@ -51,10 +54,9 @@ myApp.controller("fixedHeaderTableController", [
 
             $('.ajs-table__header__wrapper .ajs-table tbody, .ajs-table__body__wrapper .ajs-table thead').remove();
 
-            var tableHeaderCellHeight = $('.ajs-table__header__wrapper').height();
-            $('.ajs-table__body__wrapper').css('height', 'calc(100% - '+tableHeaderCellHeight+'px');
+            $('.ajs-table__body__wrapper').css('height', ($('.ajs-table__wrapper').height() - $('.ajs-table__header__wrapper').height()) +'px');
+
             $('.ajs-table__header__wrapper .ajs-table').css('position',  'relative');
-            $('.ajs-table').css('width', '0');
 
             $(".ajs-table__body__wrapper").scroll(onScrolllistener);
 
