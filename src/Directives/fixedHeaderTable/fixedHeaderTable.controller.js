@@ -6,6 +6,7 @@ myApp.controller("fixedHeaderTableController", [
         var self = this;
 
         self.tableDataPath = "/dist/json/tableData.json";
+        self.showAjsTableLoader = true;
 
         var tableCellWidth = [];
 
@@ -22,6 +23,7 @@ myApp.controller("fixedHeaderTableController", [
         };
 
         var getCellWidth = function () {
+            self.showAjsTableLoader = true;
 
             Array.prototype.slice.call(document.querySelectorAll(".ajs-table thead tr th")).forEach(function (dataTableRowCell) {
                 tableCellWidth.push(dataTableRowCell.clientWidth);
@@ -67,6 +69,10 @@ myApp.controller("fixedHeaderTableController", [
             setColGroup();
             structureTableElements();
         }, 200);
+
+        $timeout(function () {
+            self.showAjsTableLoader = false;
+        }, 1000)
 
     }
 ])
