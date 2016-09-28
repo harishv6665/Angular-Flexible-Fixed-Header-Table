@@ -1,0 +1,10 @@
+*node_modules
+npm-debug.log
+npm-debug.txt
+dist
+net-dist
+*.cfg
+*.exe
+*.zip
+.idea
+.DS_Store

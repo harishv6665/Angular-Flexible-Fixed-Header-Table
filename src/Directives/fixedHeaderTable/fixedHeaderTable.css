@@ -1,0 +1,66 @@
+.ajs-table {
+    min-width: 100%;
+    border-collapse: collapse;
+}
+
+.ajs-table th,
+.ajs-table td {
+    border: 1px solid #27415c;
+    height: 38px;
+    padding: 0 15px;
+    text-align: left;
+    color: #6180a7;
+    white-space: nowrap;
+    transition: all 0.25s ease-out;
+}
+
+.ajs-table th {
+    background-color: #253d57;
+}
+
+.ajs-table th:first-child,
+.ajs-table td:first-child {
+    border-left-color: transparent;
+}
+
+.ajs-table th:last-child,
+.ajs-table td:last-child {
+    border-right-color: transparent;
+}
+
+.ajs-table tr:first-child th,
+.ajs-table tr:first-child td {
+    border-top-color: transparent;
+}
+
+.ajs-table tr:last-child td {
+    border-bottom-color: transparent;
+}
+
+.ajs-table tr:hover td {
+    background-color: rgba(37, 61, 87, 0.6);
+}
+
+ajs-table {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.ajs-table__wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.ajs-table__header__wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.ajs-table__body__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}

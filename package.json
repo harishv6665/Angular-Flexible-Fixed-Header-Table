@@ -1,0 +1,42 @@
+{
+  "name": "angular-flexible-fixed-header-table",
+  "version": "1.0.0",
+  "description": "Fixed header table as a directive using AngularJS. Without any fixed width to table cell and options to wrap the text to multiple lines or with ellipsis.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "gulp",
+    "build": "gulp dist",
+    "clean": "gulp clean",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harishv6665/Angular-Flexible-Fixed-Header-Table.git"
+  },
+  "keywords": [
+    "Angular",
+    "Directive",
+    "Fixed",
+    "Header",
+    "Table",
+    "Flexible",
+    "AngularJS"
+  ],
+  "author": "Harish V(www.icodeweb.in)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harishv6665/Angular-Flexible-Fixed-Header-Table/issues"
+  },
+  "homepage": "https://github.com/harishv6665/Angular-Flexible-Fixed-Header-Table#readme",
+  "dependencies": {
+    "angular": "^1.5.8"
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-flatten": "^0.3.1",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}

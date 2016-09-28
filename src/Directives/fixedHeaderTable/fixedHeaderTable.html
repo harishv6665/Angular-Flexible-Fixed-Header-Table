@@ -1,0 +1,36 @@
+<table class="ajs-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email id</th>
+            <th>Gender</th>
+            <th>Company Name</th>
+            <th>Address</th>
+            <th>Frequency</th>
+            <th>Latitude</th>
+            <th>IP Address</th>
+            <th>Bit Coin Address</th>
+            <th>Others</th>
+            <th>URL</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="cell in ajsTableController.data">
+            <td>{{cell.id}}</td>
+            <td>{{cell.fName}}</td>
+            <td>{{cell.LName}}</td>
+            <td>{{cell.email}}</td>
+            <td>{{cell.gender}}</td>
+            <td>{{cell.companyName}}</td>
+            <td>{{cell.address}}</td>
+            <td>{{cell.freq}}</td>
+            <td>{{cell.lat}}</td>
+            <td>{{cell.ipAddress}}</td>
+            <td>{{cell.bitCoinAddress}}</td>
+            <td>{{cell.others}}</td>
+            <td>{{cell.url}}</td>
+        </tr>
+    </tbody>
+</table>
